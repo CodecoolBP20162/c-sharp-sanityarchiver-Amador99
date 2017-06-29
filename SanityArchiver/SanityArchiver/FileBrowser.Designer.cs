@@ -63,8 +63,9 @@
             // 
             // pathLabel
             // 
+            this.pathLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pathLabel.AutoSize = true;
-            this.pathLabel.Location = new System.Drawing.Point(282, 15);
+            this.pathLabel.Location = new System.Drawing.Point(273, 15);
             this.pathLabel.Name = "pathLabel";
             this.pathLabel.Size = new System.Drawing.Size(32, 13);
             this.pathLabel.TabIndex = 3;
@@ -72,6 +73,7 @@
             // 
             // pathBox
             // 
+            this.pathBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pathBox.Location = new System.Drawing.Point(311, 12);
             this.pathBox.Name = "pathBox";
             this.pathBox.ReadOnly = true;
@@ -98,7 +100,7 @@
             "D:\\"});
             this.dirComboBox.Location = new System.Drawing.Point(155, 12);
             this.dirComboBox.Name = "dirComboBox";
-            this.dirComboBox.Size = new System.Drawing.Size(121, 21);
+            this.dirComboBox.Size = new System.Drawing.Size(112, 21);
             this.dirComboBox.TabIndex = 6;
             this.dirComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -136,6 +138,7 @@
             // 
             // encryptBtn
             // 
+            this.encryptBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.encryptBtn.Location = new System.Drawing.Point(285, 406);
             this.encryptBtn.Name = "encryptBtn";
             this.encryptBtn.Size = new System.Drawing.Size(75, 23);
@@ -146,6 +149,7 @@
             // 
             // decryptBtn
             // 
+            this.decryptBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.decryptBtn.Location = new System.Drawing.Point(366, 406);
             this.decryptBtn.Name = "decryptBtn";
             this.decryptBtn.Size = new System.Drawing.Size(75, 23);
