@@ -10,7 +10,7 @@ namespace SanityArchiver
 {
     class Archiver
     {
-        public static void Compress(FileInfo FileToCompress )
+        public static bool Compress(FileInfo FileToCompress )
         {
             using (FileStream originalFileStream = FileToCompress.OpenRead())
             {
@@ -23,12 +23,17 @@ namespace SanityArchiver
                             originalFileStream.CopyTo(compressionStream);
                         }
                     }
+                    return true;
+                }
+                else
+                {
+                    return false;
                 }
             }
 
         }
 
-        public static void Extract(FileInfo FileToDecompress)
+        public static bool Extract(FileInfo FileToDecompress)
         {
             using (FileStream originalStream = FileToDecompress.OpenRead())
             {
@@ -42,6 +47,11 @@ namespace SanityArchiver
                         if(FileToDecompress.Extension == ".gz")
                         {
                             DecompressionStream.CopyTo(DecompressedFileStream);
+                            return true; 
+                        }
+                        else
+                        {
+                            return false;
                         }
                     }
                 }

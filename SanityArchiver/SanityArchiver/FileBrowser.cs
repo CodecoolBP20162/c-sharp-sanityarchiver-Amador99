@@ -60,7 +60,15 @@ namespace SanityArchiver
                 {
                     string fileName = ofd.FileName;
                     FileInfo file = new FileInfo(fileName);
-                    Archiver.Compress(file);
+                    bool success = Archiver.Compress(file);
+                    if (success)
+                    {
+                        MessageBox.Show("Compression successful", "File Browser", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Compression unsuccessful", "File Browser", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
+                    }
                 }
             }
         }
@@ -73,11 +81,53 @@ namespace SanityArchiver
                 {
                     string fileName = ofd.FileName;
                     FileInfo file = new FileInfo(fileName);
-                    Archiver.Extract(file);
+                    bool success = Archiver.Extract(file);
+                    if (success)
+                    {
+                        MessageBox.Show("Extraction successful", "File Browser", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Extraction unsuccessful", "File Browser", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
+                    }
                 }
             }
         }
+        
+        private void refresBtn_Click(object sender, EventArgs e)
+        {
+            fileBrowser.Refresh();
+        }
 
+        private void encryptBtn_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.ShowDialog();
+
+            string filename = ofd.FileName;
+
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.ShowDialog();
+            
+            string destination = sfd.FileName;
+
+            Encryption.EncryptFile(filename, destination);
+        }
+
+        private void decryptBtn_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.ShowDialog();
+
+            string filename = ofd.FileName;
+
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.ShowDialog();
+
+            string destination = sfd.FileName;
+
+            Encryption.DecryptFile(filename, destination);
+        }
     }
 
     }

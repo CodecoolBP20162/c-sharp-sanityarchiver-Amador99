@@ -36,6 +36,9 @@
             this.dirComboBox = new System.Windows.Forms.ComboBox();
             this.compressBtn = new System.Windows.Forms.Button();
             this.extractBtn = new System.Windows.Forms.Button();
+            this.refresBtn = new System.Windows.Forms.Button();
+            this.encryptBtn = new System.Windows.Forms.Button();
+            this.decryptBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnBack
@@ -61,7 +64,7 @@
             // pathLabel
             // 
             this.pathLabel.AutoSize = true;
-            this.pathLabel.Location = new System.Drawing.Point(237, 17);
+            this.pathLabel.Location = new System.Drawing.Point(282, 15);
             this.pathLabel.Name = "pathLabel";
             this.pathLabel.Size = new System.Drawing.Size(32, 13);
             this.pathLabel.TabIndex = 3;
@@ -69,7 +72,7 @@
             // 
             // pathBox
             // 
-            this.pathBox.Location = new System.Drawing.Point(275, 14);
+            this.pathBox.Location = new System.Drawing.Point(311, 12);
             this.pathBox.Name = "pathBox";
             this.pathBox.ReadOnly = true;
             this.pathBox.Size = new System.Drawing.Size(421, 20);
@@ -83,7 +86,7 @@
             this.fileBrowser.Location = new System.Drawing.Point(12, 42);
             this.fileBrowser.MinimumSize = new System.Drawing.Size(20, 20);
             this.fileBrowser.Name = "fileBrowser";
-            this.fileBrowser.Size = new System.Drawing.Size(704, 358);
+            this.fileBrowser.Size = new System.Drawing.Size(720, 358);
             this.fileBrowser.TabIndex = 5;
             this.fileBrowser.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.fileBrowser_DocumentCompleted);
             // 
@@ -93,7 +96,7 @@
             this.dirComboBox.Items.AddRange(new object[] {
             "C:\\",
             "D:\\"});
-            this.dirComboBox.Location = new System.Drawing.Point(110, 12);
+            this.dirComboBox.Location = new System.Drawing.Point(155, 12);
             this.dirComboBox.Name = "dirComboBox";
             this.dirComboBox.Size = new System.Drawing.Size(121, 21);
             this.dirComboBox.TabIndex = 6;
@@ -121,11 +124,44 @@
             this.extractBtn.UseVisualStyleBackColor = true;
             this.extractBtn.Click += new System.EventHandler(this.extractBtn_Click);
             // 
+            // refresBtn
+            // 
+            this.refresBtn.Location = new System.Drawing.Point(110, 12);
+            this.refresBtn.Name = "refresBtn";
+            this.refresBtn.Size = new System.Drawing.Size(39, 23);
+            this.refresBtn.TabIndex = 9;
+            this.refresBtn.Text = "R";
+            this.refresBtn.UseVisualStyleBackColor = true;
+            this.refresBtn.Click += new System.EventHandler(this.refresBtn_Click);
+            // 
+            // encryptBtn
+            // 
+            this.encryptBtn.Location = new System.Drawing.Point(285, 406);
+            this.encryptBtn.Name = "encryptBtn";
+            this.encryptBtn.Size = new System.Drawing.Size(75, 23);
+            this.encryptBtn.TabIndex = 10;
+            this.encryptBtn.Text = "Encrypt";
+            this.encryptBtn.UseVisualStyleBackColor = true;
+            this.encryptBtn.Click += new System.EventHandler(this.encryptBtn_Click);
+            // 
+            // decryptBtn
+            // 
+            this.decryptBtn.Location = new System.Drawing.Point(366, 406);
+            this.decryptBtn.Name = "decryptBtn";
+            this.decryptBtn.Size = new System.Drawing.Size(75, 23);
+            this.decryptBtn.TabIndex = 11;
+            this.decryptBtn.Text = "Decrypt";
+            this.decryptBtn.UseVisualStyleBackColor = true;
+            this.decryptBtn.Click += new System.EventHandler(this.decryptBtn_Click);
+            // 
             // FileManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(861, 435);
+            this.Controls.Add(this.decryptBtn);
+            this.Controls.Add(this.encryptBtn);
+            this.Controls.Add(this.refresBtn);
             this.Controls.Add(this.extractBtn);
             this.Controls.Add(this.compressBtn);
             this.Controls.Add(this.dirComboBox);
@@ -152,6 +188,9 @@
         private System.Windows.Forms.ComboBox dirComboBox;
         private System.Windows.Forms.Button compressBtn;
         private System.Windows.Forms.Button extractBtn;
+        private System.Windows.Forms.Button refresBtn;
+        private System.Windows.Forms.Button encryptBtn;
+        private System.Windows.Forms.Button decryptBtn;
     }
 }
 
