@@ -97,7 +97,9 @@
             this.dirComboBox.FormattingEnabled = true;
             this.dirComboBox.Items.AddRange(new object[] {
             "C:\\",
-            "D:\\"});
+            "D:\\",
+            "E:\\",
+            "F:\\"});
             this.dirComboBox.Location = new System.Drawing.Point(155, 12);
             this.dirComboBox.Name = "dirComboBox";
             this.dirComboBox.Size = new System.Drawing.Size(112, 21);
@@ -139,7 +141,7 @@
             // encryptBtn
             // 
             this.encryptBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.encryptBtn.Location = new System.Drawing.Point(285, 406);
+            this.encryptBtn.Location = new System.Drawing.Point(276, 406);
             this.encryptBtn.Name = "encryptBtn";
             this.encryptBtn.Size = new System.Drawing.Size(75, 23);
             this.encryptBtn.TabIndex = 10;
@@ -150,7 +152,7 @@
             // decryptBtn
             // 
             this.decryptBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.decryptBtn.Location = new System.Drawing.Point(366, 406);
+            this.decryptBtn.Location = new System.Drawing.Point(357, 406);
             this.decryptBtn.Name = "decryptBtn";
             this.decryptBtn.Size = new System.Drawing.Size(75, 23);
             this.decryptBtn.TabIndex = 11;

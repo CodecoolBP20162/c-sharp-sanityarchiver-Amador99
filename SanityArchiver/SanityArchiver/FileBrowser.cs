@@ -112,6 +112,7 @@ namespace SanityArchiver
             string destination = sfd.FileName;
 
             Encryption.EncryptFile(filename, destination);
+            MessageBox.Show("Encryption successful", "File Browser", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
         }
 
         private void decryptBtn_Click(object sender, EventArgs e)
@@ -127,6 +128,7 @@ namespace SanityArchiver
             string destination = sfd.FileName;
 
             Encryption.DecryptFile(filename, destination);
+            MessageBox.Show("Decryption successful", "File Browser", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
         }
     }
 
